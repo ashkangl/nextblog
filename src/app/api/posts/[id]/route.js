@@ -28,6 +28,8 @@ export const DELETE = async(req,{params})=>{
     await DB();
     const singlePost = await Posts.findById(id);
     const post = await Posts.findByIdAndDelete(id);
+    if(singlePost.filename){
     await s3.deleteObject({ Bucket: process.env.BUCKET, Key: singlePost.filename }).promise();
-    return new NextResponse(JSON.stringify({ message: "User deleted successfully" }), { status: 200 });
+    }
+    return new NextResponse(JSON.stringify({ message: "post deleted successfully" }), { status: 200 });
 }

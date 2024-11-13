@@ -1,3 +1,4 @@
+import { URL } from "@/components/general/URL";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,7 +9,7 @@ export const metadata = {
 
 export default async function Home() {
 
-  const res = await fetch(`${process.env.URL}/api/posts`);
+  const res = await fetch(`${URL}/api/posts`);
   const posts = await res.json();
 
   return (
