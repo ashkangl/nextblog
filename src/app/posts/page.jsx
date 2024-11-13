@@ -8,7 +8,7 @@ export const metadata = {
 
 const Page = async() => {
 
-    const res = await fetch(`https://nextblog-ten-lime.vercel.app/api/posts`);
+    const res = await fetch(`${process.env.URL}/api/posts`);
     const posts = await res.json();
 
     return(
