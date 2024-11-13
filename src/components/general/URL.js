@@ -1,1 +1,3 @@
-export const URL = "http://localhost:3000"
+const URL = "https://nextblog-ten-lime.vercel.app/"
+
+export default URL;
