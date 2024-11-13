@@ -1,7 +1,5 @@
-import { URL } from "@/components/general/URL";
-
 async function getData(id) {
-    const res = await fetch(`${URL}/api/posts/${id}`, {
+    const res = await fetch(`${process.env.URL}/api/posts/${id}`, {
       cache: "no-cache"},
       {next:{revalidate : '36000'}
     });
