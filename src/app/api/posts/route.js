@@ -26,6 +26,7 @@ export const POST = async (req) => {
     });
     
     try {
+    await DB();
     const { file, title, content, tags, contentType } = await req.json();
     if(file){
     const randomKey = Math.floor(Math.random() * 123456789);
