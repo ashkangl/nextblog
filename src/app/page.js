@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center h-auto pb-20 gap-16 pt-20 font-[family-name:var(--font-geist-sans)]">
       <div className="p-4">
-      {!posts ? <div className="text-red-500 animate-pulse font-semibold md:text-xl text-lg text-center">No Posts Existed!</div> : (
+      {posts &&
         <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 mt-16">
         {posts.slice(0,4).map((item)=>{
           return(
@@ -31,7 +31,7 @@ export default async function Home() {
           )
         })}
         </div>
-        )}
+        }
       </div>
       {posts.length > 4 &&
       <Link href="/posts"><div className="font-semibold text-center md:text-lg text-md md:mt-32 mt-64 hover:text-blue-500 hover:underline hover:underline-offset-4">See More ...</div></Link>

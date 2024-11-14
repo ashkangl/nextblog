@@ -13,7 +13,7 @@ const Page = async() => {
 
     return(
         <div className="grid md:grid-cols-4 grid-cols-2 md:w-[80%] md:ml-[10%] w-[95%] ml-[2.5%] mb-24 md:gap-4 gap-2">
-        {!posts ? <div>No Post To Show!</div>:(
+        {posts &&
             posts.map((item)=>{
                 return(
                 <div key={item._id} className="rounded-xl bg-gray-200 hover:scale-110 duration-500">
@@ -28,7 +28,7 @@ const Page = async() => {
                 </div>
                 )
             })
-        )}
+        }
         </div>
     )
 }
