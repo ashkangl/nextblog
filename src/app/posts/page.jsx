@@ -21,7 +21,7 @@ const Page = async() => {
                     <Link href={`/posts/${item._id}`}>
                     <div>
                         {!item.filename ? <div className="w-full h-48 rounded-t-xl shadow-lg bg-slate-600 text-white text-center">No Image</div> : (
-                        <img src={`${process.env.Storage}/${item.filename}`} alt={item.title} className="w-full h-48 rounded-t-xl shadow-lg" />
+                        <img src={`${process.env.STORAGE}/${item.filename}`} alt={item.title} className="w-full h-48 rounded-t-xl shadow-lg" />
                         )}
                         <div className="p-2 font-semibold md:text-lg text-md">{item.title}</div>
                     </div>
