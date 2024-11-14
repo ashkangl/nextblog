@@ -1,14 +1,9 @@
-"use client"
-import dynamic from 'next/dynamic'
- 
-const DynamicComponentWithNoSSR = dynamic(
-  () => import('../../components/posts/Posts'),
-  { ssr: false }
-)
+import Posts from "../../components/posts/Posts";
+
 const Page = () => {
     return(
         <div>
-            <DynamicComponentWithNoSSR />
+            <Posts />
         </div>
     )
 }
