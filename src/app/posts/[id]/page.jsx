@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 async function getData(id) {
     const res = await fetch(`${process.env.URL}/api/posts/${id}`, {
       cache: "no-cache"},
